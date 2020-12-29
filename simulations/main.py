@@ -26,7 +26,7 @@ data = [wf]
 
 avg_p = [expectation_value(P, wf) / (x_high - x_low)]
 
-for i in range(10000):
+for i in range(1000):
     if i % 100 == 0:
         print(f'Loop: {i}', end='\r')
     wf = next_state(wf, epsilon_x=epsilon_x, epsilon_t=0.0001, V=potential, n_steps=100)
